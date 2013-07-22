@@ -6,7 +6,19 @@ Using npm:
 
 ## Usage ##
 
-### roman-numerals.toArabic() ###
+### roman-numerals.toArabic(roman) ###
+toArabic() takes a roman number (as a string literal or a string object) and returns a number with the arabic equivalent.
+
+    var toArabic = require('roman-numerals').toArabic;
+    [ 'XLII', new String('XLII') ].forEach(function (x, i) {
+        console.log('%d: %s', i, toArabic(x));
+    });
+Will output:
+
+    0: 42
+    1: 42
+
+toArabic() will throw a TypeError when passed a non-string variable and will throw an Error when passed an invalid roman number. Acceptable strings are also `"nulla"` and `""` (that's empty string) which will both return 0.
 
 ### roman-numerals.toRoman(arabic) ###
 toRoman() takes an arabic number (as a number literal, a number object, a stringed literal number or a stringed object number) and returns a string with the roman equivalent.
@@ -17,10 +29,10 @@ toRoman() takes an arabic number (as a number literal, a number object, a string
     });
 Will output:
 
-    // 0: XLII
-    // 1: XLII
-    // 2: XLII
-    // 3: XLII
+    0: XLII
+    1: XLII
+    2: XLII
+    3: XLII
 
 toRoman() will throw a TypeError when passed a non-number variable or NaN and will throw an Error when passed a number under 0 or over 3999.
 
