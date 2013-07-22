@@ -1,5 +1,9 @@
 # roman-numerals #
 ## Installation ##
+Using npm:
+
+    $ npm install roman-numerals
+    
 Using git:
 
     $ git clone git@github.com:joshleaves/roman-numerals.git
