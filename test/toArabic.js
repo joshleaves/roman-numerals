@@ -7,7 +7,7 @@ var objects = literals.map(function (x) { return new String(x) });
 var lowercase = literals.map(function (x) { return x.toLowerCase(); });
 var answers = [ 1, 4, 8, 15, 16, 23, 42, 84, 100, 256, 512, 1024, 2048, 3999 ];
 
-var bad_literals = [ {}, [], 42, function () {} ];
+var bad_literals = [ 42 ]//{}, [], 42, function () {} ];
 var bad_objects = [ new Object(), new Array(), new Number(42), new Function () ];
 var bad_strings = [ 'foo', 'bar', 'foobar', 'red', 'MMORPG', 'CCCC' ];
 
@@ -22,7 +22,7 @@ function wontThrow (arr) {
 function makeThrow (arr) {
   return function () {
     arr.forEach(function (x) {
-      assert.throws(function () { toArabic(x); });
+      assert.throws(function () { toArabic(x); }, "Because of __" + x);
     });
   };
 }
@@ -53,9 +53,13 @@ describe('toArabic function:', function () {
       assert.strictEqual(toArabic(new String('nulla')), 0);
       assert.strictEqual(toArabic(new String('nuLLa')), 0);
     });
-    it('Works with literals', checkResults(literals));
-    it('Works with objects', checkResults(objects));
-    it('Works with lowercase', checkResults(lowercase));
+    it('Works with an empty string', function () {
+      assert.strictEqual(toArabic(''), 0);
+      assert.strictEqual(toArabic(new String('')), 0);
+    });
+    it('Works with string literals ', checkResults(literals));
+    it('Works with string objects', checkResults(objects));
+    it('Works with lowercase strings', checkResults(lowercase));
   });
 
 });
