@@ -8,6 +8,10 @@ Using git:
 
     $ git clone git@github.com:joshleaves/roman-numerals.git
 
+Using bower:
+
+    $ bower install roman-numerals
+    
 ## Usage ##
 
 ### roman-numerals.toArabic(roman) ###

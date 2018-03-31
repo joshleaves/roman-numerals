@@ -1,0 +1,24 @@
+{
+  "name": "roman-numerals",
+  "description": "Roman numerals conversion module",
+  "version": "1.0.3",
+  "homepage": "https://github.com/maxotek/roman-numerals",
+  "license": "MIT",
+  "main": "index.js",
+  "authors": [
+    "Arnaud 'red' Rouyer",
+    "partho"
+  ],
+  "keywords": [
+    "roman",
+    "numerals",
+    "conversion"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
