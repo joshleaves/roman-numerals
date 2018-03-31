@@ -1,7 +1,7 @@
 {
   "name": "roman-numerals",
   "description": "Roman numerals conversion module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/maxotek/roman-numerals",
   "license": "MIT",
   "main": "index.js",

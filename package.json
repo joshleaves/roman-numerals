@@ -1,6 +1,6 @@
 {
   "name": "roman-numerals",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Roman numerals conversion module",
   "main": "index.js",
   "directories": {
